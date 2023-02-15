@@ -5,10 +5,13 @@ import TodoItem from "./TodoItem";
 
 const Todo = () => {
 	const todos = useSelector((state) => state.todo);
+	// useEffect(() => {
+	// 	console.log(todos)
+	// }, [todos])
 	
 	return (
 		<div className='text-white'>
-			<h1 className='text-4xl text-center'>To Do List</h1>
+			<h1 className='text-4xl text-center font-semibold'>To Do List</h1>
 			<TodoForm />
 			<div>
 				{todos.map((todo, index) => <TodoItem todo={todo} key={index}/>)}
